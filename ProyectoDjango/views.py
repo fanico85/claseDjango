@@ -10,7 +10,7 @@ def nombre(request):
     texto = "Soy Alejandro Ramirez<br>Cursando Python"
     return HttpResponse(texto)
 
-def dia_de_hoy(rquest):
+def dia_de_hoy(request):
     dia = dt.now()
     dia = dia.strftime("%Y-%m-%d")
     texto = f"Hoy es:<br>{dia}"
