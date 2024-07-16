@@ -60,6 +60,29 @@ git push
 
 #queda pendiente como mergear las ramas con el main!!!!!!!!!!!
 
+#si luego seguimos modificando el proyecto, lo vinculamos:
+git remote add origin https://github.com/fanico85/claseDjango.git
+
+#nos movemos a la rama correspondiente main u otra:
+git checkout rama_17
+
+#traemos la data 
+git pull
+
+#creamos una rama nueva y nos ubicamos ahi
+git checkout -b rama_18
+
+#luego repetimos los mismos pasos 
+#enviamos la nueva rama con:
+git add .
+git commit -m "nuevo commit"
+git push --set-upstream origin rama_18
+
+#si enviamos los cambios a una rama existente, seria:
+git add .
+git commit -m "otro commit"
+git push
+
 
 
 

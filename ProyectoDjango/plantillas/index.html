@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    Escribo mi primer Texto en el Body del HTML
+    <p style="color: red">Hola {{nombre}}, estamos haciendo uso de variables por contexto</p>
+    <p style="color: green">y podemos acceder al apellido {{apellido}}, porque tenemos acceso a ambas variables.<br>
+    Tambien aplicamos estilos pero luego los haremos con CSS porque no es buena practica hacerlo en el archivo html.</p>
+
+    <h2>Notas:</h2>
+        {% for n in notas %}
+            {% if n <= 4 %}
+                <p style="color: red">Reprobado: {{n}}</p>
+            {% else %}
+                <p style="color: green">Aprobado: {{n}}</p>
+            {% endif %}
+        {% endfor %}
 </body>
 </html>
