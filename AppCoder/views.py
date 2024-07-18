@@ -1,5 +1,6 @@
 from AppCoder.models import Curso
 from django.http import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def curso(request, nombre, numero):
@@ -8,3 +9,17 @@ def curso(request, nombre, numero):
     documento = f"Curso: {curso.nombre}<br>Camada: {curso.camada}"
     return HttpResponse(documento)
 
+def inicio(request):
+    return render(request, "AppCoder/index.html")
+
+def cursos(request):
+    return HttpResponse('vista de cursos')
+
+def profesores(request):
+    return HttpResponse('vista de profesores')
+
+def estudiantes(request):
+    return HttpResponse('vista de estudiantes')
+
+def entregables(request):
+    return HttpResponse('vista de entregables')
