@@ -13,7 +13,7 @@ def inicio(request):
     return render(request, "AppCoder/index.html")
 
 def cursos(request):
-    return HttpResponse('vista de cursos')
+    return render(request, "AppCoder/cursos.html")
 
 def profesores(request):
     return HttpResponse('vista de profesores')
