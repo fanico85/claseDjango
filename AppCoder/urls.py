@@ -2,9 +2,9 @@ from django.urls import path
 from AppCoder.views import *
 
 urlpatterns = [
-    path('',inicio, name="inicio"),
-    path('cursos/',cursos,name="cursos"),
-    path('profesores/',profesores,name="profesores"),
-    path('estudiantes/',estudiantes, name="estudiantes"),
-    path('entregables/',entregables, name="entregables")
+    path('',inicio, name="Inicio"),
+    path('cursos/',cursos,name="Cursos"),
+    path('profesores/',profesores,name="Profesores"),
+    path('estudiantes/',estudiantes, name="Estudiantes"),
+    path('entregables/',entregables, name="Entregables")
 ]
