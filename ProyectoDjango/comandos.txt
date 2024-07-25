@@ -1,23 +1,61 @@
-#crear proyecto nuevo de Django
-django-admin startproject Mi_proyecto
-cd Mi_proyecto
-python manage.py migrate #levanta o genera una nueva base de datos 
+#creo entorno virtual en una nueva carpeta vacia que representará mi proyecto
+#Tercera_preentrega_Collado
+
+#valido que version tengo de python y de Django
+python --version 
+python -m django --version
+
+#creamos entorno virtual con python 3.11.9
+pipenv --python 3.11.9
+pipenv  shell
+
+#agregamos archivo requirements.txt con el siguiente contenido:
+# #Python 3.11.9
+# django==5.0.6
+
+#instalamos django en el entorno virtual
+pipenv install -r requirements.txt
+
+#creamos un proyecto nuevo de Django
+django-admin startproject Nails_factory
+cd Nails_factory
+
+#creamos la primera aplicacion
+python manage.py startapp Principal
+
+#levanta o genera una nueva base de datos 
+python manage.py migrate 
 
 #levantar proyecto en servidor y ctrl+C cerramos servidor para validar que funcione
 python manage.py runserver
 
+#en el settings.py configurar el nombre de la nueva aplicacion en INSTALLED_APPS, por ejemplo Principal 
+
+#URLS 
+#copiarlas desde el original y hacer los imports en urls.py
+
+#creamos las vistas en views.py que renderizaran los archivos htmls
+
+#creamos la carpeta templates que contendra los htmls 
+
 #iniciamos git
 git init
 
-#creamos el archivo .gitignore dentro del proyecto para que git ignore ciertos archivos que no quiero subir al proyecto 
+#creamos el archivo .gitignore con el contenido a ignorar:
+# __pycache__/
+# *.pyc
+# Pipfile
+# Pipfile.lock
+
 #cargamos todos los archivos
 git add .
 
 #realizamos primer commit a main
-git commit -m "Mi primer commit"
+git commit -m "creacion de proyecto"
 
-#luego de crear o validar que exista el proyecto en github lo vinculamos con:
-git remote add origin https://github.com/fanico85/claseDjango.git
+#crear proyecto en github NailsFactory
+#copiamos los 3 comandos que nos brinda github o hacemos la vinculacion con:
+git remote add origin https://github.com/fanico85/NailsFactory.git
 
 #cambiamos por primera vez el nombre de la rama Master por main
 git branch -M main
@@ -26,12 +64,12 @@ git branch -M main
 git push -u origin main
 
 #creamos una rama nueva y nos ubicamos ahi
-git checkout -b rama_17
+git checkout -b rama_1
 
 #para movernos entre las ramas, hacemos:
 git checkout nombre_rama
 
-#volvemos a django, generamos una vista, creando el archivo views.py en la carpeta del proyecto y le importamos las lobrearias necesarias para que se ejecuten las funciones
+#volvemos a django, generamos una vista, creando el archivo views.py en la carpeta del proyecto y le importamos las librearias necesarias para que se ejecuten las funciones
 #en urls.py agregamos los paths que llaman a una determinada funcion de views
 
 #luego de guardar los cambios podemos levantar el servidor para validar el funcionamiento
@@ -97,6 +135,7 @@ python manage.py migrate
 
 #creamos super usuarios
 python manage.py createsuperuser  
+#test y 12345678AB
 
 
 
